@@ -60,7 +60,6 @@ Server::~Server() {
 
 void Server::run() {
     while (1) {
-        // std::system("leaks server");
         static timespec ts;
         ts.tv_sec = 10;
         ts.tv_nsec = 0;

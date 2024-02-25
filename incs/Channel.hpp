@@ -9,12 +9,13 @@
 #include <iostream>
 
 class User;
+
 class Channel {
 private:
     std::string name;
     std::vector<User*> users;
+
 public:
-    // Channel(std::string channelName, User user);
     Channel();
     Channel(std::string s);
     ~Channel();
@@ -23,7 +24,6 @@ public:
     std::vector<User*>::iterator searchUser(const std::string& userName);
     bool removeUser(std::string& userName);
     const std::string &getName() const;
-    // const std::vector<User> &getUsers() const;
     bool operator==(const Channel& channel);
     void addUser(User &user);
     void removeUser(User &user);

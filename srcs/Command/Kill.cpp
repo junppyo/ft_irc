@@ -25,7 +25,6 @@ void Kill::execute(Server& server, std::vector<std::string>& cmd, int fd) {
 	std::string message;
 	const std::string& nickName = server.getUser(fd)->getNickName();
         
-
 	if (code == Translator::DEFAULT) {
 		int targetFd = server.getUser(cmd[1])->getFd();
 		message = translator->translateSuccess(nickName, cmd, *this);
